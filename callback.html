@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-   <html lang="fr">
-   <head>
-       <meta charset="UTF-8">
-       <title>Authentification Fitbit</title>
-   </head>
-   <body>
-       <h1>Authentification en cours...</h1>
-       <script>
-           // Récupérer le code d'autorisation de l'URL
-           const urlParams = new URLSearchParams(window.location.search);
-           const code = urlParams.get('code');
-           
-           if (code) {
-               // Stocker temporairement le code (dans la pratique, vous l'échangeriez contre un token)
-               localStorage.setItem('fitbitAuthCode', code);
-               window.location.href = 'index.html'; // Rediriger vers la page principale
-           } else {
-               document.body.innerHTML += '<p>Erreur d\'authentification</p>';
-           }
-       </script>
-   </body>
-   </html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentification Fitbit</title>
+</head>
+<body>
+    <h1>Authentification en cours...</h1>
+    <script>
+        // Récupérer le code d'autorisation de l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        
+        if (code) {
+            // Stocker temporairement le code (dans la pratique, vous l'échangeriez contre un token)
+            localStorage.setItem('fitbitAuthCode', code);
+            window.location.href = 'index.html'; // Rediriger vers la page principale
+        } else {
+            document.body.innerHTML += '<p>Erreur d\'authentification</p>';
+        }
+    </script>
+</body>
+</html>
