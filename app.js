@@ -4,7 +4,7 @@ let accessToken = '';
 // Fonction pour gérer l'authentification
 function handleAuth() {
     const clientId = '23PGTQ'; // Remplacez par votre vrai Client ID Fitbit
-    const redirectUri = encodeURIComponent('https://[votre-nom-utilisateur].github.io/callback.html');
+    const redirectUri = encodeURIComponent('https://Concombre843.github.io/callback.html');
     const scope = encodeURIComponent('sleep profile');
     const authUrl = `https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}`;
     window.location.href = authUrl;
